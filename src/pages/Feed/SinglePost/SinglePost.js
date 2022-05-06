@@ -28,8 +28,8 @@ class SinglePost extends Component {
       .then(resData => {
         this.setState({
           title: resData.post.title,
-          image: 'http://localhost:8080/' + resData.post.imageUrl,
           author: resData.post.creator.name,
+          image: 'http://localhost:8080/' + resData.post.imageUrl,
           date: new Date(resData.post.createdAt).toLocaleDateString('en-US'),
           content: resData.post.content
         });
